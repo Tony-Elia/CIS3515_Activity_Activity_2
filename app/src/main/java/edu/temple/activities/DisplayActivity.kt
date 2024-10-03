@@ -1,5 +1,6 @@
 package edu.temple.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,5 +25,9 @@ class DisplayActivity : AppCompatActivity() {
 
         textSizeSelectorButton = findViewById(R.id.textSizeSelectorButton)
         lyricsDisplayTextView = findViewById<TextView>(R.id.lyricsDisplayTextView)
+
+        textSizeSelectorButton.setOnClickListener {
+            launcher.launch(Intent(this, TextSizeActivity::class.java))
+        }
     }
 }
